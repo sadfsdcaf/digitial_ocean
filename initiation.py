@@ -75,7 +75,7 @@ if api_token:
 else:
     st.warning("⚠️ API Key is missing! Please add your DigitalOcean API key.")
 
----
+
 
 ### 📌 **3. Fetch DigitalOcean Stock Price**
 st.subheader("📈 DigitalOcean Stock Price (Last 1 Month)")
