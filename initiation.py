@@ -1,13 +1,20 @@
-import digitalocean
+import streamlit as st
+import requests
 
-# Replace with your API key
-api_token = "dop_v1_f78e2f80785703b9ed54b41c412c8ea0cf2b1926563de3ca65f2005e0bb33002"
+# Fetch DigitalOcean Service Status
+url = "https://status.digitalocean.com/api/v2/status.json"
+response = requests.get(url)
+status = response.json()
 
-# Initialize manager
-manager = digitalocean.Manager(token=api_token)
+# Display in Streamlit
+st.title("DigitalOcean Status Checker")
+st.write(f"Overall Status: {status['status']['description']}")
 
-# Get all droplets
-droplets = manager.get_all_droplets()
+# Fetch Stock Data
+import yfinance as yf
+docn = yf.Ticker("DOCN")
+data = docn.history(period="1mo")
 
-for droplet in droplets:
-    print(f"Droplet ID: {droplet.id}, Name: {droplet.name}, Status: {droplet.status}")
+# Display stock data in a table
+st.subheader("DigitalOcean Stock Price (Last 1 Month)")
+st.dataframe(data)
