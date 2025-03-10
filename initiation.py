@@ -26,7 +26,7 @@ try:
 except Exception as e:
     st.error(f"Error fetching service status: {e}")
 
----
+
 
 ### 📌 **2. Fetch DigitalOcean API Data**
 if api_token:
