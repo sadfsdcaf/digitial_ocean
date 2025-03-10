@@ -25,7 +25,7 @@ try:
 except Exception as e:
     st.error(f"Error fetching service status: {e}")
 
----
+
 
 ### 📌 **2. Fetch DigitalOcean API Data**
 if api_token:
@@ -86,7 +86,7 @@ if api_token:
 else:
     st.warning("⚠️ API Key is missing! Please add your DigitalOcean API key.")
 
----
+
 
 ### 📌 **3. Fetch DigitalOcean Stock Price**
 st.subheader("📈 DigitalOcean Stock Price (Last 1 Month)")
