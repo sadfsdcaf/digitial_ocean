@@ -7,7 +7,7 @@ import pandas as pd
 
 # Load API Key securely
 load_dotenv()
-api_token = os.getenv("DIGITALOCEAN_API_KEY")
+api_token = os.getenv("dop_v1_f78e2f80785703b9ed54b41c412c8ea0cf2b1926563de3ca65f2005e0bb33002")
 
 # Set up request headers
 headers = {"Authorization": f"Bearer {api_token}"}
