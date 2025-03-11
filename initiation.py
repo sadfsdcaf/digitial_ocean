@@ -5,4 +5,7 @@ headers = {"Authorization": f"Bearer {api_token}"}
 url = "https://api.digitalocean.com/v2/account"
 
 response = requests.get(url, headers=headers)
-print(response.json())
+
+# Debug: Print response
+print(response.status_code)  # Check HTTP response code
+print(response.json())  # See the full API response
