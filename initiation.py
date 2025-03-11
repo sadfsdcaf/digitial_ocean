@@ -1,6 +1,6 @@
 import requests
 
-api_token = "dop_v1_f78e2f80785703b9ed54b41c412c8ea0cf2b1926563de3ca65f2005e0bb33002"
+api_token = "dop_v1_1718be1e4d7b0a5e789868df3b6fba2ef0c403ee21f3d31cf91bf0419900aa1c"
 headers = {"Authorization": f"Bearer {api_token}"}
 url = "https://api.digitalocean.com/v2/account"
 
